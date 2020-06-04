@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q/A Forum</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/d2b3aa2995.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row head">
+            Question&Answer Forum
+            <img src="bootstrap/logo.png" id="logo" alt="">
+        </div>
+    </div>
+    <div class="container-fluid navi">
+        <div class="col-sm " onclick="location.reload();">
+            Home
+        </div>
+    </div>
+    <div class="container reply" id="reply">
+        <div class="row ">
+            <div class="col-sm reply-head" id="reply-head">
+                
+            </div>
+        </div>
+        <div class="row">
+            <label for="reply-type">&nbsp;Answer:</label>
+            <textarea name="" id="answer" class="reply-type"  cols="50" rows="7"></textarea>
+        </div>
+        <div class="row" style="margin-top: 1em;">
+            <div class="col-sm" >
+                <button class="btn btn-danger" onclick="cancel()"> Cancel</button>
+            
+                <button style="float: right;" onclick="submit();" class="btn btn-primary reply-btn"> Submit</button>
+            </div>
+    </div>
+        
+    </div>
+    <div class="container createquestion" id="createquestion">
+        <div class="row">
+            <div class="col-sm ask-head">
+                Ask Question
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm questextarea">
+                <textarea name="" id="askedques" cols="45" rows="8"></textarea>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-sm" >
+                    <button class="btn btn-danger" onclick="cancel()"> Cancel</button>
+                
+                    <button style="float: right;" class="btn btn-primary" onclick="create()"> Create</button>
+                </div>
+        </div>
+    </div>
+    <div class="container" id="main">
+        <div class="row" >
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-8 main" >
+              <ul id="questions">
+                    <li  id="1" class="ques" onclick="showans(this);"><span  id="q1"> How To Connect Database ??</span>
+                        
+                    </li>
+                    <ul class="ans" id="ans1">
+                            
+                    </ul>
+                    <li  id="2" class="ques" onclick="showans(this);"><span  id="q2"> How To Learn Python ??</span>
+                        
+                    </li>
+                    <ul class="ans" id="ans2">
+                            
+                    </ul>
+                    <li  id="3" class="ques" onclick="showans(this);"><span  id="q3"> How To start Django ?</span>
+                        
+                    </li>
+                    <ul class="ans" id="ans3">
+                            
+                    </ul>
+              </ul>
+          </div>
+          <div class="col-sm-2">
+          </div>
+        </div>
+      </div>
+      <div class="askbtn" id="askbtn" onclick="askquestion();" >
+        <i class="fas fa-hand-point-up"></i>
+          </div>
+      <script src="bootstrap/script.js"></script>
+      <link rel="stylesheet" href="bootstrap/style.css">
+
+</body>
+</html>
